@@ -29,6 +29,28 @@ set network.$1.dns='127.0.0.1 223.5.5.5 8.8.8.8'
 ```bash
 rm -rf tmp
 ```
+
+# 支持 iPv6：
+```bash
+Extra packages  --->  ipv6helper  （选定这个后下面几项自动选择了）
+Network  --->  odhcp6c
+Network  --->  odhcpd-ipv6only
+LuCI  --->  Protocols  --->  luci-proto-ipv6
+LuCI  --->  Protocols  --->  luci-proto-ppp
+```
+
+# 打开适用于VMware的VM Tools
+```bash
+Utilities  --->  open-vm-tools  #打开适用于VMware的VM Tools
+Utilities  --->  open-vm-tools-fuse  #打开适用于VMware的VM Tools
+```
+
+#编译丰富插件时，建议修改下面两项默认大小，留足插件空间。（x86/64）！！！
+```bash
+Target Images ---> (16) Kernel partition size (in MB)                        #默认是 (16) 建议修改 (256)
+Target Images ---> (160) Root filesystem partition size (in MB)        #默认是 (160) 建议修改 (512)
+```
+
 # 插件名称对照
 选择LuCI 配置 添加插件应用：常用
 ```bash
@@ -312,25 +334,4 @@ LuCI ---> Applications ---> luci-app-wol   #WOL网络唤醒
 LuCI ---> Applications ---> luci-app-wrtbwmon  #实时流量监测
 LuCI ---> Applications ---> luci-app-xlnetacc  #迅雷快鸟
 LuCI ---> Applications ---> luci-app-zerotier  #ZeroTier内网穿透
-```
-
-# 支持 iPv6：
-```bash
-Extra packages  --->  ipv6helper  （选定这个后下面几项自动选择了）
-Network  --->  odhcp6c
-Network  --->  odhcpd-ipv6only
-LuCI  --->  Protocols  --->  luci-proto-ipv6
-LuCI  --->  Protocols  --->  luci-proto-ppp
-```
-
-# 打开适用于VMware的VM Tools
-```bash
-Utilities  --->  open-vm-tools  #打开适用于VMware的VM Tools
-Utilities  --->  open-vm-tools-fuse  #打开适用于VMware的VM Tools
-```
-
-#编译丰富插件时，建议修改下面两项默认大小，留足插件空间。（x86/64）！！！
-```bash
-Target Images ---> (16) Kernel partition size (in MB)                        #默认是 (16) 建议修改 (256)
-Target Images ---> (160) Root filesystem partition size (in MB)        #默认是 (160) 建议修改 (512)
 ```
