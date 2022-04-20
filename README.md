@@ -1,3 +1,17 @@
+# ssh
+```bash
+sudo apt-get install openssh-server #在Ubuntu安装ssh服务
+dpkg -l | grep ssh  #开启ssh服务
+```
+在控制端（Windows）搜索CMD，打开命令提示符
+```bash
+ssh 用户名@ip地址  #链接Ubuntu
+```
+输入“yes”确认
+
+输入密码连接成功
+
+
 # openwrt-lede
 https://github.com/coolsnowwolf/lede
 # openwrt-r8168
