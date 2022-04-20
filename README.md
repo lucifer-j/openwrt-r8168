@@ -1,4 +1,13 @@
+# openwrt-lede
+https://github.com/coolsnowwolf/lede
 # openwrt-r8168
 Realtek RTL8168 Driver for Openwrt
+方法：
+cd package
+git clone https://github.com/lucifer-j/openwrt-r8168
+cd ..
+# 插件仓库
+https://github.com/liuran001/openwrt-packages
 
-openwrt/LEDE编译固件并加入螃蟹的RTL8111(RTL8168)网卡驱动教程。附编译好的X86版LEDE（含RTL8111驱动）下载：https://blog.zeruns.tech/archives/565.html
+
+
