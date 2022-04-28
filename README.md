@@ -349,3 +349,30 @@ LuCI ---> Applications ---> luci-app-wrtbwmon  #实时流量监测
 LuCI ---> Applications ---> luci-app-xlnetacc  #迅雷快鸟
 LuCI ---> Applications ---> luci-app-zerotier  #ZeroTier内网穿透
 ```
+#保存和导入make menuconfig 配置
+首先，我们下载完代码以后，一般都会先更新软件包/scripts/feeds update -a && ./scripts/feeds install 
+
+执行完上面以后，下面开始我们的制做之旅：
+
+1.make menuconfig
+
+配置我们要加载的选项。将所有我们需要默认加载的选项全部勾选，然后保存退出。
+
+2.scripts/diffconfig.sh >defconfig
+
+执行此命令，这是将我们刚才配置好的选项，导出到defconfig文件。
+
+这样我们关于openwrt的默认配置文件就做好了。关于如何做kernel的默认配置，后面再讲。
+
+3.这时，我们的defconfig文件就做好了，然后就可以上库了。当再次更新代码的时候，我们只需要执行下面两部。默认配置就可以自动导入了。
+
+
+ 
+
+导入默认配置：
+
+1.cat defconfig >> .config
+
+2.make defconfig
+
+执行上面这两条命令，默认配置就出现啦。
