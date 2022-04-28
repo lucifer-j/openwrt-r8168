@@ -349,7 +349,7 @@ LuCI ---> Applications ---> luci-app-wrtbwmon  #实时流量监测
 LuCI ---> Applications ---> luci-app-xlnetacc  #迅雷快鸟
 LuCI ---> Applications ---> luci-app-zerotier  #ZeroTier内网穿透
 ```
-#保存和导入make menuconfig 配置
+# 保存和导入make menuconfig 配置
 首先，我们下载完代码以后，一般都会先更新软件包/scripts/feeds update -a && ./scripts/feeds install 
 
 执行完上面以后，下面开始我们的制做之旅：
